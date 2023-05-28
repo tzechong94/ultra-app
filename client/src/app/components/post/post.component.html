@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<mat-card class="post-card" *ngIf="post">
+    <div class="header-row">
+        <mat-card-header class="post-header" [routerLink]="['/user/'+post.username]">
+            <!-- <img class="profile-pic" src="{{post.profile_url}}"> -->
+            <div class="header-details">
+                <p class="profile-name">{{post.username}}</p>
+                <div class="date-location">
+                    <p class="date">{{post.duration}}</p>
+                    <p class="location" *ngIf="post.postLocation">{{replaceString(post.postLocation)}}</p>
+                </div>
+            </div>
+        </mat-card-header>
+        <div *ngIf="post.username === this.currentUser">
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="icon-display">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="editPost(post.postId)">Edit Post</button>
+                <button mat-menu-item (click)="deletePost(post.postId)">Delete Post</button>
+            </mat-menu>
+        </div>
+    </div>
+
+    <mat-card-content class="post-content" (click)="viewPost(post.postId)">
+        <h2 class="post-name">{{post.postName}}</h2>
+        <p class="project-name" (click)="viewProject(post.id)">{{post.name}}</p>
+        <p class="post-reflections">{{post.postReflections}}</p>
+        <div class="media-container" *ngIf="post.mediaUrl">
+            <img class="post-media" src="https://tc1994.sgp1.digitaloceanspaces.com/{{post.mediaUrl}}">
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="post-actions">
+        <button mat-icon-button matTooltip="Basic" (click)="likePost(post.postId)">
+            <!-- <img src="/client/src/assets/images/favorite.svg"> -->
+            <mat-icon *ngIf="post.currentUserLiked" [ngStyle]="{'color':'red'}">favorite</mat-icon>
+            <mat-icon *ngIf="!post.currentUserLiked" class="material-symbols-outlined">favorite</mat-icon>
+        </button>
+        {{post.likeCount}}
+        <button mat-icon-button matTooltip="Basic" (click)="viewPost(post.postId)">
+            <mat-icon>comment</mat-icon> 
+        </button>
+        {{post.commentCount}}
+    </mat-card-actions>
+</mat-card>
+

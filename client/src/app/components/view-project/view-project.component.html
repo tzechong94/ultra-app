@@ -1,0 +1,41 @@
+
+    <mat-card class="project-container">
+        <mat-card-header class="project-header">
+            <mat-card-title class="project-title">
+                <h1>
+                    {{project.name}} in {{project.projectDuration}} months
+                </h1>
+                <div *ngIf="project.username === this.currentUser">
+                    <button mat-icon-button [matMenuTriggerFor]="menu">
+                        <mat-icon class="icon-display">more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="editProject(projectId)">Edit Project</button>
+                        <button *ngIf="!project.completed" mat-menu-item (click)="completeProject(projectId)">Mark as Completed</button>
+                        <button *ngIf="project.completed" mat-menu-item (click)="completeProject(projectId)">Mark as In Progress</button>
+                        <button mat-menu-item (click)="deleteProject(projectId)">Delete Project</button>
+                    </mat-menu>
+                </div>
+              
+            </mat-card-title>
+            <mat-card-subtitle>created: {{project.duration}} by {{project.username}}</mat-card-subtitle>
+            <mat-card-subtitle>Post count: {{project.postCount}}</mat-card-subtitle>
+            <mat-card-subtitle>Description: <br>{{project.description}}</mat-card-subtitle>
+
+            <mat-card-subtitle *ngIf="project.completed">Project Completed</mat-card-subtitle>
+            <mat-card-subtitle *ngIf="!project.completed">Project In Progress</mat-card-subtitle>
+
+            <mat-card-actions class="create-post-btn">
+                <div *ngIf="project.username === this.currentUser">
+                    <button mat-flat-button color="accent" type="button" [routerLink]="['/create-post']">Create post</button>
+                </div>
+    
+            </mat-card-actions>
+    
+        </mat-card-header>
+        
+    </mat-card>
+    
+    <app-post *ngFor="let post of posts$" [post]="post"></app-post>   
+
+

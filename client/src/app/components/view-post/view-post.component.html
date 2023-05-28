@@ -1,0 +1,61 @@
+<app-post [post]="selectedPost"></app-post>
+
+<mat-card class="post-card comments-container">
+    <form [formGroup]="commentForm" (submit)="commentSubmit()">
+
+    <mat-card-content class="post-comments">
+        <div *ngFor="let comment of comments$" class="individual-comment comment-content">
+            <div>
+                <p class="comment-user">{{comment.username}}</p>
+                <p class="comment-text">{{comment.text}}</p>
+            </div>
+            <div class="comment-duration">
+                <p>{{comment.duration}}</p>
+            </div>
+        </div>
+    </mat-card-content>
+    <div class="comment-input">
+        <mat-form-field class="mat-field">
+            <input matInput color="accent" class="comment-input-field" placeholder="Write a comment" formControlName="text">
+        </mat-form-field>
+        <div class="comment-btn">
+            <button type="submit" mat-flat-button extended color="accent" [disabled]="commentForm.invalid">Post</button>
+        </div>
+    </div>
+</form>
+
+</mat-card>
+
+<!-- 
+<mat-card class="post-card">
+    <mat-card-header class="post-header" [routerLink]="['/user/'+selectedPost.userId]">
+            <img class="profile-pic" src="{{selectedPost.profile_url}}">
+            <div class="header-details">
+                <p class="profile-name">{{selectedPost.username}}</p>
+                <div class="date-location">
+                    <p class="date">{{selectedPost.duration}}</p>
+                    <p class="location">Southwest, Singapore</p>
+                </div>
+            </div>
+    </mat-card-header>
+    <mat-card-content class="post-content">
+        <h2 class="post-name">{{selectedPost.postName}}</h2>
+        <p class="project-name">{{selectedPost.projectName}}</p>
+        <p class="post-reflections">{{selectedPost.postReflections}}</p>
+        <div class="media-container">
+
+            <img class="post-media" src="../../../assets/images/Screenshot 2023-04-12 at 3.38.00 PM.png">
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="post-actions">
+        <button mat-icon-button matTooltip="Basic">
+            <mat-icon>favorite</mat-icon>
+        </button>
+        {{selectedPost.likeCount}}
+        <button mat-icon-button matTooltip="Basic">
+            <mat-icon>comment</mat-icon> 
+        </button>
+        {{selectedPost.commentCount}}
+    </mat-card-actions> -->
+<!-- </mat-card> -->
+        

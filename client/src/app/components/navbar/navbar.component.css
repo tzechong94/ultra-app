@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid #f0f0f5;
+    align-items: center;
+    height: 54px;
+}
+
+.profile-icon {
+    align-self: flex-end;
+}
+
+.nav-group{
+    display: flex;
+    align-items: center;
+}
+
+.cta-btn {
+    border-radius: 6px; /* set your desired border radius */
+    margin-right: 8px;
+}
+
+a { 
+    text-decoration: none; 
+}

@@ -1,0 +1,36 @@
+
+
+<mat-card (click)="viewProject(project.id)" class="project-card">
+    <mat-card-header class="project-header">
+        <mat-card-title-group>
+            <mat-card-title>{{project.name}}</mat-card-title>
+            <mat-card-subtitle>in {{project.projectDuration}} months</mat-card-subtitle>
+            <mat-card-subtitle>created: {{project.duration}}</mat-card-subtitle>
+            <mat-card-subtitle *ngIf="project.completed">Completed</mat-card-subtitle>
+            <mat-card-subtitle *ngIf="!project.completed">In Progress</mat-card-subtitle>
+        </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+        Posts: {{project.postCount}}
+    </mat-card-content>
+</mat-card>
+
+<!-- <app-post *ngFor="let post of posts$" [post]="post"></app-post> -->
+
+<!-- <div *ngIf="project.username === this.currentUser">
+    <button (click)="createPost(project)">Create a new project update</button>
+</div> -->
+
+<!-- <div class="project-list-container">
+    <div class="project-list-page-header">
+        <h3>Select a project or create a new project to post an update</h3>
+    </div>
+    <div class="project-container">
+        <mat-card (click)="addProject()" class="project-card">
+            <mat-card-content class="create-project">
+                <h3 class="create-project-text">Create a new project</h3>
+            </mat-card-content>
+        </mat-card>
+    
+        
+</div> -->

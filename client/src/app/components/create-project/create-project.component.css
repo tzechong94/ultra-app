@@ -1,0 +1,27 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: white;
+    margin: auto;
+    max-width: 500px;
+}
+
+.btn {
+    margin-top: 15px;
+}
+
+.media-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.help-block {
+    color: red;
+    padding:5px;
+}

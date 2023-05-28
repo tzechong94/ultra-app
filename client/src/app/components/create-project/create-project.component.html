@@ -1,0 +1,34 @@
+<form [formGroup]="createProjectForm" (submit)="createProjectSubmit()">
+
+    <div class="form-container">
+    
+        <h1>Create a new Project</h1>
+    
+            <mat-form-field>
+                <mat-label>Project Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+            
+            <mat-form-field appearance="fill" floatLabel="always">
+                <mat-label>To be completed in</mat-label>
+                <input matInput type="number" class="example-right-align" max="12" min="1" formControlName="projectDuration">
+                <span matTextSuffix>months</span>
+            </mat-form-field>            
+            <span *ngIf="!createProjectForm.get('projectDuration')!.valid && createProjectForm.get('projectDuration')!.touched" class="help-block">Minimum 1, maximum 12</span>
+
+            <mat-form-field>
+                <mat-label>Project Description</mat-label>
+                <input matInput formControlName="description">
+            </mat-form-field>
+                        
+            <div class="button-group">
+                <!-- to do button link -->
+                <button class="btn" mat-stroked-button extended color="warn" type="button" [routerLink]="['/']">Discard</button>
+                <button class="btn" [disabled]="createProjectForm.invalid" mat-flat-button extended color="accent" type="submit">Create Project</button>
+            </div>
+            
+            <!-- <button class="btn" mat-flat-button color="warn" type="button">Complete Project</button> -->
+    
+    </div>
+    </form>
+    

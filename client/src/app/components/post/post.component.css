@@ -1,0 +1,97 @@
+.profile-pic {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.post-media {
+    max-width: 100%;
+    justify-self: center;
+}
+
+
+.post-header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.post-header:hover {
+    cursor: pointer;
+}
+
+.post-content:hover {
+    cursor: pointer;
+}
+
+.media-container{
+    display: flex;
+    justify-content: center;
+}
+.date-location {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    color: #6d6d78;
+    font-size: 12px;
+}
+
+.post-actions{
+    display: flex;
+    justify-content: flex-start ;
+}
+.profile-name{
+    margin: 0;
+    font-size: 16px;
+}
+
+.project-name {
+    font-size: 16px;
+    margin: 0px;
+    color: #6d6d78;
+}
+
+.post-name {
+    margin-bottom: 5px;
+}
+
+.location {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.date {
+    margin: 0;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* padding-top: 20px; */
+    background-color: white;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icon-display {
+    margin-top: 10px;
+    align-self: flex-end;
+}

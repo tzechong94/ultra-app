@@ -1,0 +1,22 @@
+.signup {
+    width: 100%;
+    padding: 25px;
+}
+
+.form-container {
+    min-width: 300px;
+    max-width: 450px;
+    width: 100%;  
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+
+.help-block {
+    color: red;
+    padding:5px;
+}

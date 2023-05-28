@@ -1,0 +1,35 @@
+<mat-toolbar class="navbar">
+    <a href="">
+      Ultra
+    </a>
+    <div class="nav-group">
+      <div *ngIf="isLoggedIn">
+        <button mat-flat-button color="accent" class="cta-btn" [routerLink]="['user/'+ username]">
+          Create
+        </button>
+        <button mat-button [matMenuTriggerFor]="menu">{{username}}</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item [routerLink]="['user/'+ username]">Profile</button>
+          <button mat-menu-item (click)="logout()">Log Out</button>
+        </mat-menu>
+
+        <!-- <button mat-icon-button class="profile-icon"[routerLink]="['user/'+ username]" >
+          <mat-icon>account_circle</mat-icon>
+        </button> -->
+        <!-- <button mat-flat-button color="accent" class="cta-btn" (click)="logout()">
+          Log Out
+        </button> -->
+
+      </div>
+
+      <div *ngIf="!isLoggedIn">
+        <button mat-flat-button color="accent" class="cta-btn" [routerLink]="['signup']">
+          Sign Up
+        </button>
+        <button mat-flat-button color="accent" class="cta-btn" [routerLink]="['login']">
+          Log In
+        </button>
+      </div>
+
+    </div>
+</mat-toolbar>

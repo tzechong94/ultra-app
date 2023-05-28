@@ -1,0 +1,32 @@
+.project-card {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 20px; /* set your desired border radius */
+    box-shadow: 0 0 5px rgba(0,0,0,0.3); /* add a box shadow for a nice effect */
+    display: flex;
+    justify-content: center;
+}
+
+.project-card:hover, .project-card:active {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-color: #aaa;
+}
+
+.project-container {
+    margin: 5vw;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 5%;
+}
+
+.project-header {
+    margin-bottom: 20%;
+    justify-self: center;
+    justify-content: center;
+    display: flex;
+}
+

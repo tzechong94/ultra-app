@@ -1,0 +1,18 @@
+    
+<div class="profile-info">
+    <h1 class="username">{{user.username}}</h1>
+    <h1 class="project-count">Projects: {{user.projectCount}}</h1>
+</div>
+
+<div class="project-container">
+
+    <mat-card [routerLink]="['/create-project']" class="project-card">
+        <mat-card-content class="create-project">
+            <h3 class="create-project-text">Create a new project</h3>
+        </mat-card-content>
+    </mat-card>
+
+    
+    <app-project *ngFor="let project of projects$" [project]="project"></app-project>
+</div> 
+

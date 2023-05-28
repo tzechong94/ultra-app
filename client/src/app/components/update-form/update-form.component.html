@@ -1,0 +1,42 @@
+<form [formGroup]="form" (submit)="updateSubmit()">
+
+<div class="form-container">
+
+    <h1>Project Update</h1>
+
+        <mat-form-field>
+            <mat-label>Project Name</mat-label>
+            <input matInput formControlName="projectName">
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>To be completed in</mat-label>
+            <input matInput type="number" class="example-right-align" max="12" min="1" formControlName="projectDuration">
+            <span matTextSuffix>months</span>
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>Update Name</mat-label>
+            <input matInput placeholder="Enter name of update" value="Update #4" formControlName="updateName">
+        </mat-form-field>
+        
+        
+        <mat-form-field>
+            <mat-label>Reflections</mat-label>
+            <textarea matInput placeholder="What did you do? What could be done better? How do you feel? Reflect on your progress" formControlName="updateReflections"></textarea>
+        </mat-form-field>
+        
+        <div class="media-container">
+            <p>Upload media</p>
+            <input type="file">
+        </div>
+        
+        <div class="button-group">
+            <button class="btn" mat-stroked-button extended color="warn" type="button" [routerLink]="['/projects']">Discard Update</button>
+            <button class="btn" [disabled]="form.invalid" mat-flat-button extended color="primary" type="submit">Submit Update</button>
+        </div>
+        
+        <button class="btn" mat-flat-button color="warn" type="button">Complete Project</button>
+
+</div>
+</form>

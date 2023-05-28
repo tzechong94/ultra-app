@@ -1,0 +1,34 @@
+<div class="container">
+
+    <form class="form-container" [formGroup]="loginForm" (submit)="loginSubmit()">
+        <mat-card class="signup">
+
+            <h1>Log In</h1>
+            
+            <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username">
+            </mat-form-field>
+            <span *ngIf="!loginForm.get('username')!.valid && loginForm.get('username')!.touched" class="help-block">Please enter a valid username</span>
+            
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+            </mat-form-field>
+            <span *ngIf="!loginForm.get('password')!.valid && loginForm.get('password')!.touched" class="help-block">Please enter a valid password</span>
+
+
+            <button class="btn" [disabled]="loginForm.invalid" mat-flat-button extended color="primary" type="submit">Log In</button>
+            
+            <span style="padding-top: 20px">New user? <a routerLink="/signup">Sign up here</a></span>
+
+            <span *ngIf='isError'>Login Failed. Please check your credentials and try again.</span>
+            <span *ngIf="registerSuccessMessage.length > 0">{{registerSuccessMessage}}</span>
+        </mat-card>
+
+    </form>
+
+
+    
+</div>
+
