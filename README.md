@@ -32,7 +32,7 @@ Track, Learn, and Progress in Your Personal Projects, Hobbies and Learning. Cons
 3. What other features are in the pipeline?
 Some ideas that I have include:
 - Will probably start off with the more basic ones like forgetting password, changing password, social logins, sharing, weekly reminder on push notifications etc. Sorry i did the more important features first. 
-- Was reading about deliberate practice from the researcher who coined the term, and learned that the most efficient way of deliberate practice is to have someone experienced to give weekly tasks outside of your comfort zone, share their mental representation of how they think of the skill, and to provide constant feedback. Could an AI do plan a detailed roadmap for you, set tasks and give you feedback? Or could this garner more interest to attract experts to coach less experienced individuals? 
+- Was reading about deliberate practice from the researcher who coined the term, and learned that the most efficient way of deliberate practice is to have someone experienced to give weekly tasks outside of your comfort zone, share their mental representation of how they think of the skill, to provide constant feedback, and of course to put in lots of hours into practising. Could an AI do plan a detailed roadmap for you, set tasks and give you feedback? Or could this garner more interest to attract experts to coach less experienced individuals? 
 - AI generated daily plan
 - Sharing of real life events to help you join a local community, or perhaps things like running races for you to commit to before you embark on your self improvement journey.
 - tell me what else you need!
