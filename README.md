@@ -1,6 +1,7 @@
 # ultra-app
 
-https://app.tryultra.xyz/ 
+https://app.tryultra.xyz/
+
 https://tzechong94.github.io/ultra-landing-page/ visit landing page for more info
 
 ## Strava for all your personal projects.
