@@ -23,11 +23,11 @@ Track, Learn, and Progress in Your Personal Projects, Hobbies and Learning. Cons
 
 
 ### FAQs
-__1. I have feedback/ideas for the app. How can I tell you?__ 
+__1. I have feedback/ideas/found bugs for the app. How can I tell you?__ 
 - You can contact me via email tze.chong1994@gmail.com
 
 __2. Why can't I do shorter/longer projects? (why 1 to 12 months?)__
-- Ultra was designed for people embarking on relatively harder goals/projects so they could learn consistency and find joy in working in consistent work towards their goals. I assumed it would be fun for people to turn their new year's resolutions into projects so I set 12 months as the limit. If you need more time, create a follow up project!
+- Ultra was designed for people embarking on relatively harder goals/projects so they could learn consistency and find joy in putting in consistent work towards their goals. I assumed it would be fun for people to turn their new year's resolutions into projects so I set 12 months as the limit. If you need more time, create a follow up project!
 - Discipline and consistency are the hardest thing I learned, so making it visual and fun might be a way to hack our brain to stick at it.
 
 __3. What other features are in the pipeline?__
